@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControladorProducto;
+use App\Http\Controllers\PagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,21 +14,5 @@ use App\Http\Controllers\ControladorProducto;
 */
 
 //Laravel 8 (Nuevo)
-Route::get("/productos", [ControladorProducto::class, 'index']);
-Route::get('/about', [ControladorProducto::class, 'about']);
-Route::get('/productos/ciudades', [ControladorProducto::class, 'districts']);
-
-// El patron será un entero
-Route::get('/productos/{id}', [ControladorProducto::class, 'show'])->where('id', '[0-9]+');
-
-// El patron será una serie de letras
-
-//Route::get('/productos/{name}', [ControladorProducto::class, 'show'])->where('name','a-zA-z+');
-
-//El patron sera uno de varios links o direcciones
-
-Route::get('/productos/{name}/{id}',
-    [ControladorProducto::class, 'show'])->where([
-        'name'=>'[a-z]',
-        'id' => '[0-9]+']
-    );
+Route::get("/", [PagesController::class, 'index']);
+Route::get('/about', [PagesController::class, 'about']);
