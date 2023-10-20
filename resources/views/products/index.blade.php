@@ -7,5 +7,11 @@
 </head>
 <body>
     <h1>Productos</h1>
+    <p>
+        {{ $title }}
+    </p>
+    <p>
+        {{ $description }}
+    </p>
 </body>
 </html>

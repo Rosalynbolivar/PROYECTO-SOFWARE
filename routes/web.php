@@ -15,7 +15,5 @@ use App\Http\Controllers\ControladorProducto;
 
 //Laravel 8 (Nuevo)
 Route::get("/productos", [ControladorProducto::class, 'index']);
-
-//Laravel 8 (Nueva otro)
-
-Route::get('/productos', 'App\Http\Controllers\ControladorProducto@index');
+Route::get('/about', [ControladorProducto::class, 'about']);
+Route::get('/productos/{id}', [ControladorProducto::class, 'show'];
