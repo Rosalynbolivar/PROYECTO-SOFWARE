@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ControladorProducto;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Envia una view
-Route::get('/', function () {
-    return view('home');
-});
+//Laravel 8 (Nuevo)
+Route::get("/productos", [ControladorProducto::class, 'index']);
+
+//Laravel 8 (Nueva otro)
+
+Route::get('/productos', 'App\Http\Controllers\ControladorProducto@index');
