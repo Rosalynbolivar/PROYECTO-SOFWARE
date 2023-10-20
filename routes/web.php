@@ -22,3 +22,13 @@ Route::get('/productos/ciudades', [ControladorProducto::class, 'districts']);
 Route::get('/productos/{id}', [ControladorProducto::class, 'show'])->where('id', '[0-9]+');
 
 // El patron será una serie de letras
+
+//Route::get('/productos/{name}', [ControladorProducto::class, 'show'])->where('name','a-zA-z+');
+
+//El patron sera uno de varios links o direcciones
+
+Route::get('/productos/{name}/{id}',
+    [ControladorProducto::class, 'show'])->where([
+        'name'=>'[a-z]',
+        'id' => '[0-9]+']
+    );
