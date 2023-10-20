@@ -6,9 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Productos</h1>
+    <h1>
+        Los distritos son:
+    </h1>
     <p>
-        {{ $products }}
+        @foreach ($distritos as $item)
+            <p>
+                {{ $item }}
+            </p>
+        @endforeach
     </p>
 </body>
 </html>

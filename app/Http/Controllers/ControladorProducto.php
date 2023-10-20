@@ -17,7 +17,24 @@ class ControladorProducto extends Controller
     public function about(){
         return 'Acerca de nosotros';
     }
-    public function show($id){ // Usar id como entrada de pagina
-        return $id; //Se manda como salida la variable de Id
+    public function show($id){ // Usa nombre como entrada de pagina
+        $data = [
+            '1' => 'Temperatura',
+            '2'=> 'Humedad'
+        ];
+
+        return view('products.index', [
+            'products' => $data[$id] ?? 'producto con ID: ' . $id . ' no existe' //Revisa si exite en la tabla de datos
+        ]);
+    }
+    public function districts(){
+        $distritos=[
+            'ASA'=> 'Alto Selva Alegre',
+            'PA'=> 'Paucarpata',
+            'CA'=> 'Cayma',
+            'CH'=> 'Characato',
+            'MI'=> 'Miraflores'
+        ];
+        return view('products.dist')->with('distritos',$distritos);
     }
 }
