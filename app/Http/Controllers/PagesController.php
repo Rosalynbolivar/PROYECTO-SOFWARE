@@ -2,23 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\tempyhum;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function index(){
-        //Logica para el index como usuarios:
+        //Prueba para mandar datos a nuesta base  de datos desde una función:
+        
+        $tempyhum = new tempyhum([
+            'temperatura'=>16, //Datos de prueba
+            'humedad'=>15,
+        ]);
+        $tempyhum->save();
 
-        $admins=[
-            ['usuario'=>'Omar',
-            'priv'=> '1',
-        ],
-        [
-            'usuario'=>'adm2',
-            'priv'=> '2',
-        ]
-    ];
-        return view('index',['administradores'=>$admins]);
+        return view('index');
     }
     public function about(){
         $admins=[
