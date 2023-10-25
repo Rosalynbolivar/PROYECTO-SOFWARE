@@ -1,23 +1,45 @@
-@if (10<5) <!--Con arroba podemos ir poniendo funciones que funcionan gracias a laravel-->
-    <p>
-        Esto solo aparece porque la funciòn que tenemos nos dice que aparecera solo si 4 es menor que 5.
-    </p>
-@elseif (2==5)
-    <p>
-        Esto solo aparec porque se evito el tener un caso anterior con elif.
-    </p>
-@else
-    <p>
-        Ninguna de las condiciones se cumplio
-    </p>
-@endif
-@empty($ubicación)
-    <!-- Solo se ejecutara si detecta que la ubicación es vacia-->
-    <h2>
-        No se definio la variable ubicación
-    </h2>
-@endempty
+<!DOCTYPE html>
+<html lang="EN">
 
-@isset($record)
-    <!--Solo se ejecutarà si una de nuestras variables esta definida-->
-@endisset
+@include('layouts.header')
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark ticky-top bg-body-tertiary"
+        data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand fw-light" href="/"><span class="fas fa-brain me-1"> </span>Ideas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-4">
+        <h1>
+            La pàgina fue creada por:
+        </h1>
+        @foreach ($admins as $admin)
+            <h3>
+                {{ $admin['usuario'] }}
+            </h3>
+        @endforeach
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

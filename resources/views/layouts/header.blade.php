@@ -1,26 +1,10 @@
-<!-- Navigation --> <!-- header para ser incluido en nuestra pagina web-->
-<nav class="top-menu-container">
-    <div class="logo-header">
-        <a href="">
-            <img
-            src="https://cdn.pixabay.com/photo/2017/02/18/19/20/logo-2078018_960_720.png"
-            alt="Logo personal portfolio"
-            title="Logo personal portfolio"
-            />
-        </a>
-    </div>
-    <ul>
-        <li>
-            <a href="about">About</a>
-        </li>
-        <li>
-            <a href="/">Pagina Principal</a>
-        </li>
-        <li>
-            <a href="Portafolio">Portfolio</a>
-        </li>
-        <li>
-            <a href="Contacto">Contacto</a>
-        </li>
-    </ul>
-</nav>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ config('app.name') }}</title>
+
+    <link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
