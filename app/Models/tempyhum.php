@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 
 class tempyhum extends Model
-{protected $table = 'tempyhum';
+{   protected $table = 'tempyhum';
+    public $timestamps = false;
     use HasFactory;
     
     protected $fillable = [
+        'ubicacion',
         'temperatura',
         'humedad',
     ];

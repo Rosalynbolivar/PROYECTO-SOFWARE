@@ -11,7 +11,8 @@ class PagesController extends Controller
         //Prueba para mandar datos a nuesta base  de datos desde una función:
         
         $tempyhum = new tempyhum([
-            'temperatura'=>16, //Datos de prueba
+            'ubicacion'=>'Mediante larave',//Datos de prueba
+            'temperatura'=>16, 
             'humedad'=>15,
         ]);
         $tempyhum->save();
