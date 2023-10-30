@@ -8,16 +8,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-        //Prueba para mandar datos a nuesta base  de datos desde una función:
-        
-        $tempyhum = new tempyhum([
-            'ubicacion'=>'Mediante larave',//Datos de prueba
-            'temperatura'=>16, 
-            'humedad'=>15,
-        ]);
-        $tempyhum->save();
-
-        return view('index');
+            return view('index');
     }
     public function about(){
         $admins=[
