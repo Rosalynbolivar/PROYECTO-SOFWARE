@@ -15,13 +15,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                        <a class="nav-link active" aria-current="page" href="/login">Acceder</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/register">Register</a>
+                        <a class="nav-link" href="/register">Registro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/profile">Profile</a>
+                        <a class="nav-link" href="/profile">Perfil</a>
                     </li>
                 </ul>
             </div>
@@ -39,23 +39,15 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <span>Explore</span></a>
+                                    <span>Explorar</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <span>Feed</span></a>
+                                    <span>Gráfica</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <span>Terms</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span>Support</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span>Settings</span></a>
+                                    <span>Tablas</span></a>
                             </li>
                         </ul>
                     </div>
@@ -66,10 +58,10 @@
             </div>
             <div class="col-6">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Idea created Successfully
+                    ¡Hora de ver la temperatura y humedad!
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-                <h4> Share yours ideas </h4>
+                <h4> Bienvenido a AmbientTrack </h4>
                 <div class="row">
                     <div class="mb-3">
                         <textarea class="form-control" id="idea" rows="3"></textarea>

@@ -16,6 +16,8 @@ use App\Http\Controllers\PagesController;
 //Laravel 8 (Nuevo)
 /* Rutas de la página*/
 
+/* Página principal*/
 Route::get("/", [PagesController::class, 'index']);
+/* Página de creadores*/
 Route::get('/about', [PagesController::class, 'about']);
 

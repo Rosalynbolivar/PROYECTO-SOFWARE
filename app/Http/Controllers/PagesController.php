@@ -12,16 +12,20 @@ class PagesController extends Controller
     }
     public function about(){
         $admins=[
-            ['usuario'=>'Omar',
+            ['usuario'=>'- Omar',
             'priv'=> '1',
         ],
         [
-            'usuario'=>'Juan',
+            'usuario'=>'- Juan',
             'priv'=> '2',
         ],
         [
-            'usuario'=>'Ronald',
-            'priv'=> '2',
+            'usuario'=>'- Ronald',
+            'priv'=> '3',
+        ],
+        [
+            'usuario'=>'- Ciolymar',
+            'priv'=> '4',
         ]
     ];
         return view('about',['admins'=>$admins]);
