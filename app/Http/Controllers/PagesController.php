@@ -26,4 +26,7 @@ class PagesController extends Controller
     ];
         return view('about',['admins'=>$admins]);
     }
+    public function how(){
+        return view('how');
+    }
 }
