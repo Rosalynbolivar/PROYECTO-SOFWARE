@@ -54,31 +54,23 @@
                             <table class="table table-striped">
                                 <thead>
                                   <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Fuente</th>
+                                    <th scope="col">Temperatura</th>
+                                    <th scope="col">Humedad</th>
+                                    <th scope="col">Momento</th>
                                   </tr>
                                 </thead>
                                 <tbody>
+                                  @foreach ($tyh as $t)
                                   <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <td>{{ $t['idDatabase'] }}</td>
+                                    <td>{{ $t['ubicacion'] }}</td>
+                                    <td>{{ $t['temperatura'] }}</td>
+                                    <td>{{ $t['humedad'] }}</td>
+                                    <td>{{ $t['fechaHora'] }}</td>
                                   </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                  </tr>
+                                  @endforeach
                                 </tbody>
                               </table>
                         </div>

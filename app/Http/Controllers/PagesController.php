@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-            return view('index');
+            $data=tempyhum::all();
+            return view('index',['tyh'=>$data]);
     }
     public function about(){
         $admins=[
