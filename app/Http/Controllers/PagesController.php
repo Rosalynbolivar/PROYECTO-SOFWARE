@@ -22,7 +22,11 @@ class PagesController extends Controller
         ],
         [
             'usuario'=>'Ronald',
-            'priv'=> '2',
+            'priv'=> '3',
+        ],
+        [
+            'usuario'=>'Ciolymar',
+            'priv'=> '4',
         ]
     ];
         return view('about',['admins'=>$admins]);
