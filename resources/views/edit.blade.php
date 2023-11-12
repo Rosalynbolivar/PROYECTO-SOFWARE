@@ -24,8 +24,8 @@
                                     <span>Feed</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="add">
-                                    <span>Añadir datos</span></a>
+                                <a class="nav-link" href="#">
+                                    <span>Terms</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about">
@@ -41,40 +41,14 @@
             </div>
             <div class="col-6">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Bienvenido
+                    Estas editando el darto ubicado con la id: {{ $idDB }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <hr>
                 <div class="mt-3">
                     <div class="card">
                         <div class="card-body">
-                            <table class="table table-striped">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Fuente</th>
-                                    <th scope="col">Temperatura</th>
-                                    <th scope="col">Humedad</th>
-                                    <th scope="col">Momento</th>
-                                    <th scope="col">Acción</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  @foreach ($tyh as $t)
-                                  <tr>
-                                    <td>{{ $t['idDatabase'] }}</td>
-                                    <td>{{ $t['ubicacion'] }}</td>
-                                    <td>{{ $t['temperatura'] }}</td>
-                                    <td>{{ $t['humedad'] }}</td>
-                                    <td>{{ $t['fechaHora'] }}</td>
-                                    <td>
-                                        <a href="{{ url('edit/'.$t->idDatabase) }}" class='btn btn-success'>Editar</a>
-                                        <a href="" class='btn btn-danger'>Borrar</a>
-                                    </td>
-                                  </tr>
-                                  @endforeach
-                                </tbody>
-                              </table>
+                           <p>SIIII!!!</p>
                         </div>
                     </div>
                 </div>

@@ -30,4 +30,22 @@ class PagesController extends Controller
     public function how(){
         return view('how');
     }
+    public function edit($id){
+        $tyh = tempyhum::where('idDatabase',$id)->first();
+        return view('edit',['idDB'=>$id]);
+    }
+    public function add(){
+        return view('add');
+    }
+
+
+    public function insert(Request $request)
+    {
+        $thm = new tempyhum;
+        $thm->ubicacion = 'manual';
+        $thm->temperatura = $request->input('tem');
+        $thm->humedad = $request->input('hum');
+        $thm->save();
+        return view('index')->with('status','Datos añadidos de manera adecuada');
+    }
 }

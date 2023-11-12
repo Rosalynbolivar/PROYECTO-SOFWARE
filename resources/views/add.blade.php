@@ -24,7 +24,7 @@
                                     <span>Feed</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="add">
+                                <a class="nav-link" href="#">
                                     <span>Añadir datos</span></a>
                             </li>
                             <li class="nav-item">
@@ -41,40 +41,29 @@
             </div>
             <div class="col-6">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Bienvenido
+                    Estas añdadiendo datos a la base de datos de manera manual
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <hr>
                 <div class="mt-3">
                     <div class="card">
                         <div class="card-body">
-                            <table class="table table-striped">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Fuente</th>
-                                    <th scope="col">Temperatura</th>
-                                    <th scope="col">Humedad</th>
-                                    <th scope="col">Momento</th>
-                                    <th scope="col">Acción</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  @foreach ($tyh as $t)
-                                  <tr>
-                                    <td>{{ $t['idDatabase'] }}</td>
-                                    <td>{{ $t['ubicacion'] }}</td>
-                                    <td>{{ $t['temperatura'] }}</td>
-                                    <td>{{ $t['humedad'] }}</td>
-                                    <td>{{ $t['fechaHora'] }}</td>
-                                    <td>
-                                        <a href="{{ url('edit/'.$t->idDatabase) }}" class='btn btn-success'>Editar</a>
-                                        <a href="" class='btn btn-danger'>Borrar</a>
-                                    </td>
-                                  </tr>
-                                  @endforeach
-                                </tbody>
-                              </table>
+                            <form action="{{ url('insert-data') }}" method="POST">
+                                @csrf
+        
+                                <div class="form-group mb-3">
+                                    <label for="">Temperatura</label>
+                                    <input type="number" name="tem" class="form-control">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="">Humedad</label>
+                                    <input type="number" name="hum" class="form-control">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <button type="submit" class="btn btn-primary">Subir Datos</button>
+                                </div>
+        
+                            </form>
                         </div>
                     </div>
                 </div>
