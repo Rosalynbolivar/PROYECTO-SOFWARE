@@ -69,7 +69,7 @@
                                     <td>{{ $t['fechaHora'] }}</td>
                                     <td>
                                         <a href="{{ url('edit/'.$t->idDatabase) }}" class='btn btn-success'>Editar</a>
-                                        <a href="" class='btn btn-danger'>Borrar</a>
+                                        <a href="{{ url('delete/'.$t->idDatabase) }}" class='btn btn-danger'>Borrar</a>
                                     </td>
                                   </tr>
                                   @endforeach

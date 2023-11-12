@@ -71,4 +71,13 @@ class PagesController extends Controller
 
         return view('index',['tyh'=>$data])->with('status','Datos añadidos de manera adecuada');
     }
+
+    public function delete($id){
+        $thm = tempyhum::find($id);
+        $thm->delete();
+
+        $data=tempyhum::all();
+
+        return view('index',['tyh'=>$data])->with('status','Datos eliminados de manera adecuada');
+    }
 }
