@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-            $data=tempyhum::all();
+            $data=tempyhum::paginate(2);
             return view('index',['tyh'=>$data]);
     }
     public function about(){
@@ -48,7 +48,7 @@ class PagesController extends Controller
         $thm->fechaHora = now();
         $thm->update();
 
-        $data=tempyhum::all();
+        $data=tempyhum::paginate(2);
 
         return view('index',['tyh'=>$data])->with('status','Datos editados de manera adecuada');
     }
@@ -67,7 +67,7 @@ class PagesController extends Controller
         $thm->fechaHora = now();
         $thm->save();
 
-        $data=tempyhum::all();
+        $data=tempyhum::paginate(2);
 
         return view('index',['tyh'=>$data])->with('status','Datos añadidos de manera adecuada');
     }
@@ -76,7 +76,7 @@ class PagesController extends Controller
         $thm = tempyhum::find($id);
         $thm->delete();
 
-        $data=tempyhum::all();
+        $data=tempyhum::paginate(2);
 
         return view('index',['tyh'=>$data])->with('status','Datos eliminados de manera adecuada');
     }

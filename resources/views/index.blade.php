@@ -75,6 +75,7 @@
                                   @endforeach
                                 </tbody>
                               </table>
+                              {{ $tyh->links() }}
                         </div>
                     </div>
                 </div>
