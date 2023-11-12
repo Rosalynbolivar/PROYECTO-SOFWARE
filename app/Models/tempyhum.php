@@ -11,6 +11,8 @@ class tempyhum extends Model
     public $timestamps = false;
     use HasFactory;
     
+    protected $primaryKey = 'idDatabase';
+
     protected $fillable = [
         'ubicacion',
         'temperatura',

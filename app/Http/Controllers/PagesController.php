@@ -36,8 +36,23 @@ class PagesController extends Controller
     }
     public function edit($id){
         $tyh = tempyhum::where('idDatabase',$id)->first();
-        return view('edit',['idDB'=>$id]);
+        
+        return view('edit',['idDB'=>$id],compact('tyh'));
     }
+
+    public function update(Request $request, $id){
+        $thm = tempyhum::where('idDatabase',$id)->first();
+        $thm->ubicacion = 'editado';
+        $thm->temperatura = $request->input('tem');
+        $thm->humedad = $request->input('hum');
+        $thm->fechaHora = now();
+        $thm->update();
+
+        $data=tempyhum::all();
+
+        return view('index',['tyh'=>$data])->with('status','Datos editados de manera adecuada');
+    }
+
     public function add(){
         return view('add');
     }

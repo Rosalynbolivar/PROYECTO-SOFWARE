@@ -24,8 +24,8 @@
                                     <span>Feed</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <span>Terms</span></a>
+                                <a class="nav-link text-dark" href="#">
+                                    <span>Añadir datos</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route("creators.about")}}">
@@ -41,14 +41,30 @@
             </div>
             <div class="col-6">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Estas editando el darto ubicado con la id: {{ $idDB }}
+                    Estás editando los datos de la id {{ $idDB }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <hr>
                 <div class="mt-3">
                     <div class="card">
                         <div class="card-body">
-                           <p>SIIII!!!</p>
+                            <form action="{{ url('edit-data/'.$tyh->idDatabase) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+        
+                                <div class="form-group mb-3">
+                                    <label for="">Temperatura</label>
+                                    <input type="number" name="tem" value="{{ $tyh->temperatura }}" class="form-control">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="">Humedad</label>
+                                    <input type="number" name="hum" value="{{ $tyh->humedad }}" class="form-control">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <button type="submit" class="btn btn-primary">Confirmar Datos</button>
+                                </div>
+        
+                            </form>
                         </div>
                     </div>
                 </div>
