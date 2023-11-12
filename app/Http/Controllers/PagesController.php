@@ -45,7 +45,11 @@ class PagesController extends Controller
         $thm->ubicacion = 'manual';
         $thm->temperatura = $request->input('tem');
         $thm->humedad = $request->input('hum');
+        $thm->fechaHora = now();
         $thm->save();
-        return view('index')->with('status','Datos añadidos de manera adecuada');
+
+        $data=tempyhum::all();
+
+        return view('index',['tyh'=>$data])->with('status','Datos añadidos de manera adecuada');
     }
 }

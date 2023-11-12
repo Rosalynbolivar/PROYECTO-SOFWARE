@@ -20,4 +20,4 @@ Route::get('/how', [PagesController::class,'how']);
 Route::get('/add', [PagesController::class,'add']);
 Route::get('/edit/{id}', [PagesController::class,'edit']); //soon TM
 
-Route::get('insert-data', [PagesController::class, 'insert']);
+Route::post('insert-data', [PagesController::class, 'insert']);
