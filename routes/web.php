@@ -24,3 +24,4 @@ Route::post('insert-data', [PagesController::class, 'insert']);
 Route::put('edit-data/{id}', [PagesController::class,'update']);
 
 Route::get('delete/{id}',[PagesController::class,'delete']);
+Route::get('upload/5867',[PagesController::class,'upload']);

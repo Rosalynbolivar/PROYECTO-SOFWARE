@@ -80,4 +80,18 @@ class PagesController extends Controller
 
         return view('index',['tyh'=>$data])->with('status','Datos eliminados de manera adecuada');
     }
+
+    public function upload(Request $request){
+
+        $t=$request->t;
+        $h=$request->h;
+
+        $thm = new tempyhum;
+        $thm->ubicacion = 'microcontrolador';
+        $thm->temperatura = $t;
+        $thm->humedad = $h;
+        $thm->fechaHora = now();
+        $thm->save();
+        return 'great';
+    }
 }
