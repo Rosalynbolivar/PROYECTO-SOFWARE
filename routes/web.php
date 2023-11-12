@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\RegisterController;
+Use App\Http\Controllers\SessionsrController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +15,18 @@ use App\Http\Controllers\PagesController;
 |
 */
 
+
+
 //Laravel 8 (Nuevo)
 Route::get("/", [PagesController::class, 'index'])->name("home.index");
+/////
+
+//register y login
+Route::get("/register", [RegisterController::class, 'create'])->name("register.create");
+Route::get("/login", [SessionsrController::class, 'create'])->name("login.create");
+
+////
+
 Route::get('/about', [PagesController::class, 'about'])->name("creators.about");
 Route::get('/how', [PagesController::class,'how'])->name("method.how");
 Route::get('/add', [PagesController::class,'add']);
