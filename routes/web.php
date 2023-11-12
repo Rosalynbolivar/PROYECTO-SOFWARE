@@ -14,9 +14,9 @@ use App\Http\Controllers\PagesController;
 */
 
 //Laravel 8 (Nuevo)
-Route::get("/", [PagesController::class, 'index']);
-Route::get('/about', [PagesController::class, 'about']);
-Route::get('/how', [PagesController::class,'how']);
+Route::get("/", [PagesController::class, 'index'])->name("home.index");
+Route::get('/about', [PagesController::class, 'about'])->name("creators.about");
+Route::get('/how', [PagesController::class,'how'])->name("method.how");
 Route::get('/add', [PagesController::class,'add']);
 Route::get('/edit/{id}', [PagesController::class,'edit']); //soon TM
 

@@ -12,7 +12,7 @@
                     <div class="card-body pt-3">
                         <ul class="nav nav-link-secondary flex-column fw-bold gap-2">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">
+                                <a class="nav-link" href="{{route("home.index")}}">
                                     <span>Home</span></a>
                             </li>
                             <li class="nav-item">
@@ -24,15 +24,15 @@
                                     <span>Feed</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link text-dark" href="#">
                                     <span>Añadir datos</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about">
+                                <a class="nav-link" href="{{route("creators.about")}}">
                                     <span>About</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="how">
+                                <a class="nav-link" href="{{route("method.how")}}">
                                     <span>Method used</span></a>
                             </li>
                         </ul>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-6">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Estas añdadiendo datos a la base de datos de manera manual
+                    Estás añdadiendo datos a la base de datos de manera manual.
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <hr>

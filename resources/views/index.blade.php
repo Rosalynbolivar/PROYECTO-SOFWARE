@@ -28,11 +28,11 @@
                                     <span>Añadir datos</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about">
+                                <a class="nav-link" href="{{route("creators.about")}}">
                                     <span>About</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="how">
+                                <a class="nav-link" href="{{route("method.how")}}">
                                     <span>Method used</span></a>
                             </li>
                         </ul>

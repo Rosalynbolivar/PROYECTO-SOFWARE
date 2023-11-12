@@ -7,7 +7,7 @@
     @include('layouts.navigation')
     <div class="container py-4">
         <h1>
-            Metodo usado:
+            Método usado:
         </h1>
         <p>
             Para el desarrollo de este proyecto, se realizó mediante el uso de un microcontrolador esp32 que hace uso de un dht11 para poder obtener los datos deseados de humedad

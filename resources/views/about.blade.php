@@ -16,7 +16,7 @@
         @endforeach
         <p>
             El objetivo de esta pagina fue creada como un proyecto de laravel para poder realizar el mapeo de la temperatura
-             y humedad de distintos lugares haciendo que estos datos acaben dirigiendose a una base de datos desde la que se podria ir procesando para su analisis
+             y humedad de distintos lugares haciendo que estos datos acaben dirigiendose a una base de datos desde la que se podria ir procesando para su analisis.
         </p>
         <center>
             <div style="width: 1000px; height: 600px;">
