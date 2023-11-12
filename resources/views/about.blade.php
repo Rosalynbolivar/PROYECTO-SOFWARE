@@ -15,13 +15,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/login">Acceder</a>
+                        <a class="nav-link active" aria-current="page" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/register">Registro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/profile">Perfil</a>
+                        <a class="nav-link" href="{{route("prin.index")}}">Inicio</a>
                     </li>
                 </ul>
             </div>

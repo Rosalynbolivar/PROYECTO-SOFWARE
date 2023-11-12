@@ -21,7 +21,8 @@
                         <a class="nav-link" href="/register">Registro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/profile">Perfil</a>
+                        <a class="nav-link" href="{{route("creators.about")}}">Creadores</a>
+                    
                     </li>
                 </ul>
             </div>

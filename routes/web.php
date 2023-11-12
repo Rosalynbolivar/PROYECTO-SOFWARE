@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +19,7 @@ use App\Http\Controllers\PagesController;
 /* Rutas de la página*/
 
 /* Página principal*/
-Route::get("/", [PagesController::class, 'index']);
+Route::get("/LARAVEL-CLIMATE/public", [PagesController::class, 'index'])->name("prin.index");
 /* Página de creadores*/
-Route::get('/about', [PagesController::class, 'about']);
+Route::get('/about', [PagesController::class, 'about'])->name("creators.about");
 
