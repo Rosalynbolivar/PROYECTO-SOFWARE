@@ -51,10 +51,10 @@
                             <table class="table table-striped">
                                 <thead>
                                   <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Fuente</th>
-                                    <th scope="col">Temperatura</th>
-                                    <th scope="col">Humedad</th>
+                                    <th scope="col">@sortablelink('ID')</th>
+                                    <th scope="col">@sortablelink('Ubicación')</th>
+                                    <th scope="col">@sortablelink('Temperatura')</th>
+                                    <th scope="col">@sortablelink('Humedad')</th>
                                     <th scope="col">Momento</th>
                                     <th scope="col">Acción</th>
                                   </tr>
@@ -75,7 +75,7 @@
                                   @endforeach
                                 </tbody>
                               </table>
-                              {{ $tyh->links() }}
+                              {!! $tyh->appends(\Request::except('page'))->render() !!}
                         </div>
                     </div>
                 </div>

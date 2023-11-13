@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-            $data=tempyhum::paginate(2);
+        $data=tempyhum::sortable()->paginate(5);
             return view('index',['tyh'=>$data]);
     }
     public function about(){
@@ -35,20 +35,20 @@ class PagesController extends Controller
         return view('how');
     }
     public function edit($id){
-        $tyh = tempyhum::where('idDatabase',$id)->first();
+        $tyh = tempyhum::find($id);
         
         return view('edit',['idDB'=>$id],compact('tyh'));
     }
 
     public function update(Request $request, $id){
-        $thm = tempyhum::where('idDatabase',$id)->first();
+        $thm = tempyhum::find($id);
         $thm->ubicacion = 'editado';
         $thm->temperatura = $request->input('tem');
         $thm->humedad = $request->input('hum');
         $thm->fechaHora = now();
         $thm->update();
 
-        $data=tempyhum::paginate(2);
+        $data=tempyhum::sortable()->paginate(5);
 
         return view('index',['tyh'=>$data])->with('status','Datos editados de manera adecuada');
     }
@@ -67,7 +67,7 @@ class PagesController extends Controller
         $thm->fechaHora = now();
         $thm->save();
 
-        $data=tempyhum::paginate(2);
+        $data=tempyhum::sortable()->paginate(5);
 
         return view('index',['tyh'=>$data])->with('status','Datos añadidos de manera adecuada');
     }
@@ -76,7 +76,7 @@ class PagesController extends Controller
         $thm = tempyhum::find($id);
         $thm->delete();
 
-        $data=tempyhum::paginate(2);
+        $data=tempyhum::sortable()->paginate(5);
 
         return view('index',['tyh'=>$data])->with('status','Datos eliminados de manera adecuada');
     }
