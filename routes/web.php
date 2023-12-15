@@ -25,3 +25,14 @@ Route::put('edit-data/{id}', [PagesController::class,'update']);
 
 Route::get('delete/{id}',[PagesController::class,'delete']);
 Route::get('upload/5867',[PagesController::class,'upload']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

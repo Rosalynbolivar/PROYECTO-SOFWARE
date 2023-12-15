@@ -87,7 +87,7 @@ class PagesController extends Controller
         $h=$request->h;
 
         $thm = new tempyhum;
-        $thm->ubicacion = 'microcontrolador';
+        $thm->ubicacion = 'micrnode ocontrolador';
         $thm->temperatura = $t;
         $thm->humedad = $h;
         $thm->fechaHora = now();
